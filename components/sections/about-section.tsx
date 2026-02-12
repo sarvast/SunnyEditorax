@@ -84,7 +84,56 @@ export default function AboutSection() {
                         ))}
                     </motion.div>
                 </div>
+
+                {/* Pricing Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
+                    className="mt-24 max-w-lg mx-auto"
+                >
+                    <div className="glass-card p-8 rounded-3xl text-center relative overflow-hidden group hover:shadow-xl transition-all duration-500 border-2 border-white/50">
+                        {/* Background Gradient Animation */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-pink-100/50 via-purple-100/30 to-blue-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                        <div className="relative z-10">
+                            <h3 className="text-2xl font-serif font-bold text-indigo-950 mb-2">Simple Pricing</h3>
+                            <p className="text-indigo-900/60 font-sans mb-8">Professional video editing made affordable.</p>
+
+                            <div className="py-6">
+                                <span className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">$3</span>
+                                <span className="text-xl text-indigo-950/60 font-medium"> USD</span>
+                                <div className="text-sm text-pink-500 font-medium mt-2">Starting Price</div>
+                            </div>
+
+                            <div className="space-y-3 mb-8 text-left max-w-xs mx-auto">
+                                {[
+                                    "Instagram Reels",
+                                    "YouTube Shorts",
+                                    "TikTok Videos",
+                                    "Fast Turnaround",
+                                    "Professional Quality"
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-3 text-indigo-900/80">
+                                        <div className="w-5 h-5 rounded-full bg-pink-100 flex items-center justify-center flex-shrink-0">
+                                            <span className="text-pink-500 text-xs">✓</span>
+                                        </div>
+                                        <span className="font-sans font-medium">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <a
+                                href="#contact"
+                                className="block w-full py-4 rounded-xl bg-indigo-950 text-white font-bold hover:bg-indigo-900 transition-all shadow-lg hover:shadow-indigo-200/50 transform hover:-translate-y-1"
+                            >
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
-        </section>
+        </section >
     )
 }

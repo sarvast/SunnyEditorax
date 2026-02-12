@@ -40,7 +40,7 @@ export default function Navigation() {
                 >
                     {/* Logo */}
                     <Link href="/" className="text-xl font-serif font-bold text-indigo-950 tracking-tight">
-                        etx<span className="text-pink-500">.</span>
+                        ETX<span className="text-pink-500">.</span>
                     </Link>
 
                     {/* Desktop Menu */}

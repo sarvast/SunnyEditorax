@@ -59,8 +59,8 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-indigo-950 mb-1">Instagram</h3>
-                                    <a href="https://instagram.com/sunny_editorax" className="text-indigo-600 hover:text-pink-500 transition-colors font-sans block">
-                                        @sunny_editorax
+                                    <a href="https://www.instagram.com/_editorax2.1" className="text-indigo-600 hover:text-pink-500 transition-colors font-sans block">
+                                        @_editorax2.1
                                     </a>
                                 </div>
                             </div>

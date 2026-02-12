@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 export default function PortfolioSection() {
     // Combine all videos into a single list for a unified grid
     const allVideos = [
+        { type: 'local', src: "/lv_7580153870437993733_20260211165023.mp4", title: "Latest Viral Edit" },
         { type: 'local', src: "/lv_0_20260128161334.mp4", title: "Sunny Focus Edit" },
         { type: 'youtube', id: "bDziX4cL-ro", title: "Featured Viral Short" },
         { type: 'youtube', id: "4LbDsJZhTYc", title: "Viral Short 1" },
