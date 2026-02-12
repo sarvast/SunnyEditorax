@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react"
 import { motion, useScroll } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export default function Navigation() {
@@ -39,8 +40,12 @@ export default function Navigation() {
                         }`}
                 >
                     {/* Logo */}
-                    <Link href="/" className="text-xl font-serif font-bold text-indigo-950 tracking-tight">
-                        ETX<span className="text-pink-500">.</span>
+                    <Link href="/" className="block">
+                        <img
+                            src="/logo.png"
+                            alt="Sunny Editorax Logo"
+                            className="h-16 w-auto object-contain"
+                        />
                     </Link>
 
                     {/* Desktop Menu */}

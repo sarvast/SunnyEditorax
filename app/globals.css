@@ -9,6 +9,7 @@
 
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
+  --font-script: var(--font-great-vibes);
 
   --animate-float: float 6s ease-in-out infinite;
 

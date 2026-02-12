@@ -13,6 +13,14 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
+import { Great_Vibes } from "next/font/google";
+
+const greatVibes = Great_Vibes({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-great-vibes",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://sunny-etx.vercel.app"),
   title: {
@@ -30,21 +38,17 @@ export const metadata: Metadata = {
     title: "Sunny Editorax | Professional Video Editor",
     description: "Expert video editor specializing in viral Instagram Reels, YouTube Shorts, and TikTok content.",
     siteName: "Sunny Editorax",
-    images: [
-      {
-        url: "/avatar.jpg", // Using the avatar as the OG image
-        width: 1200,
-        height: 630,
-        alt: "Sunny Editorax - Professional Video Editor",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sunny Editorax | Professional Video Editor",
     description: "Expert video editor specializing in viral Instagram Reels, YouTube Shorts, and TikTok content.",
-    images: ["/avatar.jpg"],
     creator: "@sunny_editorax",
+  },
+  icons: {
+    icon: "/avatar.jpg",
+    shortcut: "/avatar.jpg",
+    apple: "/avatar.jpg",
   },
   robots: {
     index: true,
@@ -67,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased bg-soft-gradient min-h-screen`}
+        className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} antialiased bg-soft-gradient min-h-screen`}
       >
         {children}
       </body>
