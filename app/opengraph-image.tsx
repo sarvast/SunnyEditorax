@@ -38,7 +38,7 @@ export default async function Image() {
                         <div style={{ fontSize: 72, fontWeight: 900, color: '#1E1B4B', letterSpacing: '-0.05em' }}>
                             Sunny
                         </div>
-                        <div style={{ fontSize: 72, fontWeight: 900, color: '#EC4899', marginLeft: 20, letterSpacing: '-0.05em', backgroundClip: 'text', background: 'linear-gradient(to right, #ec4899, #a855f7)', color: 'transparent' }}>
+                        <div style={{ fontSize: 72, fontWeight: 900, marginLeft: 20, letterSpacing: '-0.05em', backgroundClip: 'text', background: 'linear-gradient(to right, #ec4899, #a855f7)', color: 'transparent' }}>
                             Editorax
                         </div>
                     </div>
