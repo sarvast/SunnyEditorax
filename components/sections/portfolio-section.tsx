@@ -1,0 +1,71 @@
+
+"use client"
+
+import { motion } from "framer-motion"
+
+export default function PortfolioSection() {
+    // Combine all videos into a single list for a unified grid
+    const allVideos = [
+        { type: 'local', src: "/lv_0_20260128161334.mp4", title: "Sunny Focus Edit" },
+        { type: 'youtube', id: "4LbDsJZhTYc", title: "Viral Short 1" },
+        { type: 'youtube', id: "_JpUNyaboY4", title: "Viral Short 2" },
+    ]
+
+    return (
+        <section id="projects" className="py-24 relative">
+            <div className="container mx-auto px-6">
+                <div className="text-center mb-16">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl font-serif font-bold text-indigo-950 mb-4"
+                    >
+                        Selected Works
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-indigo-900/60 max-w-2xl mx-auto font-sans"
+                    >
+                        A curated selection of high-performing vertical videos.
+                    </motion.p>
+                </div>
+
+                {/* Unified Video Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+                    {allVideos.map((video, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1, duration: 0.6 }}
+                            className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group border-4 border-white bg-black"
+                        >
+                            {video.type === 'local' ? (
+                                <video
+                                    src={video.src}
+                                    controls
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                    preload="metadata"
+                                    playsInline
+                                />
+                            ) : (
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${video.id}?controls=1&rel=0&playsinline=1&modestbranding=1`}
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                    title={video.title}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            )}
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
