@@ -38,11 +38,13 @@ export const metadata: Metadata = {
     title: "Sunny Editorax | Professional Video Editor",
     description: "Expert video editor specializing in viral Instagram Reels, YouTube Shorts, and TikTok content.",
     siteName: "Sunny Editorax",
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sunny Editorax | Professional Video Editor",
     description: "Expert video editor specializing in viral Instagram Reels, YouTube Shorts, and TikTok content.",
+    images: ["/og-image.png"],
     creator: "@sunny_editorax",
   },
   icons: {
